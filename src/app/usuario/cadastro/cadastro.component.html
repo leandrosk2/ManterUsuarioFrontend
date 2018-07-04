@@ -1,0 +1,50 @@
+<form (ngSubmit)="salvar()">
+  <div class="form-group">
+    <br/>
+    <h3>{{titulo}}</h3>
+
+    <label for="codigo">Código:</label>
+    <input type="input" class="form-control" name="codigo" placeholder="Digite o código do Usuário" maxlength="8" size="8" [(ngModel)]="usuario.codigoUsuario"
+    />
+
+    <label>Senha:
+      <input type="input" name="senha" maxlength="15" size="15" [(ngModel)]="usuario.senha" />
+    </label>
+    <br/>
+    <br/>
+
+    <label>Código Perfil:
+      <input type="input" name="codigoPerfil" maxlength="3" size="3" [(ngModel)]="usuario.codigoPerfil" />
+    </label>
+    <br/>
+    <br/>
+
+    <label>Descrição do Perfil:
+      <input type="input" name="descricaoPerfil" maxlength="30" size="30" [(ngModel)]="usuario.descricaoPerfil" />
+    </label>
+    <br/>
+    <br/>
+
+    <label>Número da Unidade:
+      <input type="input" name="numeroUnidade" maxlength="4" size="4" [(ngModel)]="usuario.numeroUnidade" />
+    </label>
+    <br/>
+    <br/>
+
+    <label>Situação Usuário:
+      <div class="form-check">
+        <input type="radio" name="indicadorSituacao" [(ngModel)]="usuario.indicadorSituacao" [value]="true">Sim
+        <input type="radio" name="indicadorSituacao" [(ngModel)]="usuario.indicadorSituacao" [value]="false">Não
+      </div>
+    </label>
+    <br/>
+    <br/>
+
+    <label>Nome do Utilizador:
+      <input type="input" name="nomeUtilizador" maxlength="30" size="30" [(ngModel)]="usuario.nomeUtilizador" />
+    </label>
+    <br/>
+    <br/>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+</form>
